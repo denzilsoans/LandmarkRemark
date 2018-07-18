@@ -1,0 +1,16 @@
+.table-full-width {
+  width: 100%;
+}
+
+.location-card {
+  width: 400px;
+}
+
+.location-header-image {
+  /*background-image: url('../../assets/home-map.png');*/
+  background-size: cover;
+}
+
+.location-textarea {
+  height: 150px;
+}

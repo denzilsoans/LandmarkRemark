@@ -1,0 +1,57 @@
+<div class="pull-right">
+    <a [routerLink]="['/login']">
+        <span class='glyphicon glyphicon-log-out'></span> Log Out
+    </a>
+</div>
+<br />
+<hr />
+<span [hidden]="!loadingApi">Loading user locations... Taking too long? <a href="#" (click)="loadUserlocations()">try again</a></span>
+<div class="loc-form"><span [hidden]="!isNavigating">Navigating to location...</span></div>
+<div class="map-div">
+    <sebm-google-map [zoom]="zoom" [latitude]="lat" [longitude]="lng" style="height:300px">
+        <sebm-google-map-marker *ngFor="let l of (mapLocations | locationFilter : filterString)" [iconUrl]="l.iconUrl" [latitude]="l.latitude"
+                                [longitude]="l.longitude" [label]="l.label" [markerDraggable]="false" style="height:300px">
+            <sebm-google-map-info-window [disableAutoPan]="true" style="height:300px">
+                <h3>
+                    <strong>{{l.address}}</strong><br>
+                </h3>
+                <span>(Lat:{{l.latitude}}, Long:{{l.longitude}})</span>
+                <div>
+                    <p [hidden]="l.notes ==''">Notes/Remarks: {{l.notes}}</p>
+                    <p [hidden]="l.username ==''">Visited by: <strong>{{l.username}}</strong></p>
+                    <p [hidden]="l.dateCreated ==''">Last Visited: {{l.dateCreated}}</p>
+                </div>
+                <div [hidden]="!l.isHome">
+                    <button md-raised-button (click)="openDialog(myLocation)">Add Current Location</button>
+                </div>
+            </sebm-google-map-info-window>
+        </sebm-google-map-marker>
+    </sebm-google-map>
+</div>
+<br />
+<div id="location-form" class="table-full-width loc-form">
+    <button md-raised-button (click)="openDialog(myLocation)" class="btn btn-primary">Add Current Location</button>
+    <span class="fill-space"></span>
+    <button md-raised-button (click)="reCenter()" class="btn btn-primary">Go To My Location</button>
+</div>
+<br />
+<div id="loc-table" [hidden]="!tableLocations || tableLocations.length == 0">
+    <p><input class="input-table" placeholder="Search by UserName & Remark" type="text" [(ngModel)]="filterString"></p>
+    <table id="tbl-locations" class="table-full-width">
+        <thead>
+        <th>Address</th>
+        <th>Remarks</th>
+        <th>Username</th>
+        <th>Date Created</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let loc of (tableLocations | locationFilter : filterString)">
+                <td>{{loc.address}}</td>
+                <td>{{loc.notes}}</td>
+                <td>{{loc.username}}</td>
+                <td>{{loc.dateCreated}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

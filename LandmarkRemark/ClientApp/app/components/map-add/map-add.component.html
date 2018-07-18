@@ -1,0 +1,23 @@
+<div id="map-form" [hidden]="false">
+    <form [formGroup]="locationForm" (ngSubmit)="onSubmit()" novalidate>
+
+        <md-card class="location-card">
+            <md-card-header class="col-md-2">
+                <div md-card-avatar class="location-header-image"></div>
+                <md-card-title><strong>{{myLocation.address}}</strong></md-card-title>
+                <md-card-subtitle>Lat: {{myLocation.latitude}}, Long: {{myLocation.longitude}}</md-card-subtitle>
+            </md-card-header>
+            <br />
+            <md-card-content>
+                <md-input-container class="table-full-width">
+                    <textarea class="location-textarea" mdInput placeholder="Notes" formControlName="notes" value=""></textarea>
+                </md-input-container>
+            </md-card-content>
+            <br />
+            <md-card-actions class="col-md-2 col-md-offset-5">
+                <button md-raised-button class="btn">Save</button>
+                <button type="button" md-raised-button (click)="cancel()" class="btn">Cancel</button>
+            </md-card-actions>
+        </md-card>
+    </form>
+</div>
