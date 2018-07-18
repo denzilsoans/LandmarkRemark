@@ -29,11 +29,11 @@ Once logged in, the home screen contains the below items.
 1. No error message in the login screen if an invalid user has been entered. It simply does not login.
 2. No validation in the note pop up. Current location can be saved without a note.
 3. Application is built only in one layer. Ideally it has to be split into Business,Data Access and entity layers.
-4. UI can be improved a lot. I have concentrated mainly on the functionality.
-5. jwt Token based authentication is not fully implemented or tested.
+4. Even though the UI is responsive, lot of design improvements are necessary. I have concentrated mainly on the functionality.
+5. jwt Token based authentication is not fully implemented.
 6. No unit tests on the UI side & Server Side.
 
-## Time line (approx 13hrs)
+## Time line (approx 13hrs) 
  * Architectural design - 3 hrs
  * UI Design - 4 hrs
  * Server Side Code - 3 hrs
