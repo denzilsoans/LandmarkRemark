@@ -33,8 +33,11 @@ Once logged in, the home screen contains the below items.
 6. No unit tests on the UI side & Server Side.
 
 # Time line (approx 13hrs)
- Architectural design - 3 hrs
- UI Design - 4 hrs
- Server Side Code - 3 hrs
- ORM,database creation and seed - 2 hrs
- Documentation - 30 mins
+ * Architectural design - 3 hrs
+ * UI Design - 4 hrs
+ * Server Side Code - 3 hrs
+ * ORM,database creation and seed - 2 hrs
+ * Documentation - 30 mins
+
+# ScreenShots
+![Home](/Screenshots/AddNotes.JPG "HomePage")
