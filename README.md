@@ -40,4 +40,9 @@ Once logged in, the home screen contains the below items.
  * Documentation - 30 mins
 
 # ScreenShots
-![Home](/Screenshots/AddNotes.JPG "HomePage")
+Home Page
+![Home](/Screenshots/Home.JPG "Home Page")
+Login Page
+![Login](/Screenshots/Login.JPG "Login Page")
+Add Notes Page
+![AddNotes](/Screenshots/AddNotes.JPG "Add Notes Page")
