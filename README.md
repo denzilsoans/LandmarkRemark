@@ -1,6 +1,10 @@
-# Landmark Remark Solution
+# Landmark Comments Solution
 
-The Solution is an SPA, built using .NET Core 2.0, Entity Framework 2.1 (Data persistence), Angular 4, Bootstrap (responsive). Visual studio 2017 was used as the code editor. Data is saved in local sql db. Dependency Injection is achieved using Automapper. Webpack is used as the module bundler. 
+The Solution is an SPA, 
+1. built using .NET Core 2.0, Entity Framework 2.1 (Data persistence), Angular 4, Bootstrap (responsive). Visual studio 2017 was used as the code editor. 
+2. Data is saved in local sql db. 
+3. Dependency Injection is achieved using Automapper.
+4. Webpack is used as the module bundler. 
 
 ## Solution Build and Run
 1. Dependent Nuget Packages should be automatically installed on first build. If not, Right click on the project -> Manage
@@ -12,7 +16,7 @@ The Solution is an SPA, built using .NET Core 2.0, Entity Framework 2.1 (Data pe
    | UserName | Password | 
    |----------|:--------:|
    | Test1    | 123456   |
-   | Test2	  | 123456   |
+   | Test2    | 123456   |
    | Test3    | 123456   |
  
 ## Overview
@@ -32,13 +36,6 @@ Once logged in, the home screen contains the below items.
 4. Even though the UI is responsive, lot of design improvements are necessary. I have concentrated mainly on the functionality.
 5. jwt Token based authentication is not fully implemented.
 6. No unit tests on the UI side & Server Side.
-
-## Time line (approx 13hrs) 
- * Architectural design - 3 hrs
- * UI Design - 4 hrs
- * Server Side Code - 3 hrs
- * ORM,database creation and seed - 2 hrs
- * Documentation - 30 mins
 
 ## ScreenShots
 Home Page
